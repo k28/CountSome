@@ -9,8 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView() {
+            NavigationLink(destination: CountSomeView(total:0)) {
+                Text("Count View")
+                    .font(.largeTitle)
+                    .padding()
+            }
+            .navigationTitle("Hello!")
+        }
     }
 }
 
